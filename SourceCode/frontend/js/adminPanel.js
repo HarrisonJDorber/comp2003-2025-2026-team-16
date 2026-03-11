@@ -11,7 +11,7 @@ window.addEventListener('DOMContentLoaded', function() {
         e.preventDefault();
         userMsg.textContent = '';
         var formData = new FormData(userForm);
-        fetch('http://127.0.0.1:5000/create_user', {
+        fetch('https://comp2003-2025-2026-team-16.onrender.com/create_user', {
             method: 'POST',
             body: formData
         })
@@ -41,7 +41,7 @@ window.addEventListener('DOMContentLoaded', function() {
         e.preventDefault();
         agentMsg.textContent = '';
         var formData = new FormData(agentForm);
-        fetch('http://127.0.0.1:5000/create_agent', {
+        fetch('https://comp2003-2025-2026-team-16.onrender.com/create_agent', {
             method: 'POST',
             body: formData
         })
@@ -71,7 +71,7 @@ window.addEventListener('DOMContentLoaded', function() {
         e.preventDefault();
         locationMsg.textContent = '';
         var formData = new FormData(locationForm);
-        fetch('http://127.0.0.1:5000/create_location', {
+        fetch('https://comp2003-2025-2026-team-16.onrender.com/create_location', {
             method: 'POST',
             body: formData
         })
@@ -156,7 +156,7 @@ window.addEventListener('DOMContentLoaded', function() {
             itemList.innerHTML = '';
             return;
         }
-        fetch(`http://127.0.0.1:5000/get_items?table=${table}`)
+        fetch(`https://comp2003-2025-2026-team-16.onrender.com/get_items?table=${table}`)
             .then(response => response.json())
             .then(data => {
                 if (data.success) {
@@ -186,7 +186,7 @@ window.addEventListener('DOMContentLoaded', function() {
         e.preventDefault();
         deleteMsg.textContent = '';
         var formData = new FormData(deleteForm);
-        fetch('http://127.0.0.1:5000/delete_item', {
+        fetch('https://comp2003-2025-2026-team-16.onrender.com/delete_item', {
             method: 'POST',
             body: formData
         })
